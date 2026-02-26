@@ -22,6 +22,7 @@ app.use("/api/income" , incomeRouter)
 app.use("/api/expense", expenseRouter)
 app.use("/api/dashboard", dashboardRouter);
 app.use("/uploads",express.static(path.join(__dirname, "uploads")))
+
 app.listen(PORT, () => {
     console.log(`server is running on Port : ${PORT}`)
 })
