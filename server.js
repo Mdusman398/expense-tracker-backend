@@ -17,10 +17,10 @@ app.use(express.json())
 app.use(cookieParser())
 connectDb()
 const PORT = process.env.PORT || 8000;
-app.use("/api/auth", authRouter )
-app.use("/api/income" , incomeRouter)
-app.use("/api/expense", expenseRouter)
-app.use("/api/dashboard", dashboardRouter);
+app.use("/api", authRouter )
+app.use("/api" , incomeRouter)
+app.use("/api", expenseRouter)
+app.use("/api", dashboardRouter);
 app.use("/uploads",express.static(path.join(__dirname, "uploads")))
 
 app.listen(PORT, () => {
